@@ -20,8 +20,8 @@ function ExperienceDetail() {
     const [selectedShowcase, setSelectedShowcase] = useState(null);
 
     return (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex justify-center items-center">
-            <div className="relative bg-zinc-900 rounded-3xl border border-zinc-700 shadow-2xl
+        <div className="fixed inset-0 bg-[#f2a013]/10 backdrop-blur-md z-50 flex justify-center items-center">
+            <div className="relative bg-[#efbe69] rounded-3xl border border-zinc-700 shadow-2xl
                 w-[95%]
                 sm:w-[90%]
                 md:w-[85%]
@@ -52,7 +52,7 @@ function ExperienceDetail() {
                         {project.tools.map((tool,index)=>(
                             <span
                                 key={index}
-                                className="bg-orange-700 px-4 py-2 rounded-lg"
+                                className="bg-[#f2a013] px-4 py-2 rounded-lg"
                             >
                                 {tool}
                             </span>
@@ -66,8 +66,8 @@ function ExperienceDetail() {
                     </h2>
                     <div className="grid md:grid-cols-2 gap-4 mt-8">
                         {project.responsibilities.map((item, index)=>(
-                            <div key={index} className="bg-zinc-800 border border-zinc-700 rounded-xl p-5">
-                                <i className="ri-checkbox-circle-fill text-orange-500 mr-2"></i>
+                            <div key={index} className="bg-[#efbe69] border border-zinc-700 rounded-xl p-5">
+                                <i className="ri-checkbox-circle-fill text-orange-600 mr-2"></i>
                                 {item}
                             </div>
                         ))}
@@ -80,12 +80,12 @@ function ExperienceDetail() {
                     </h2>
                     <div className="grid lg:grid-cols-2 gap-8 mt-8">
                         {project.showcase.map((item)=>(
-                            <div key={item.id} className="bg-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden">
+                            <div key={item.id} className="bg-[#efbe69] rounded-2xl border border-zinc-700 overflow-hidden">
                                 {/* <img src={item.image} alt={item.title} className="w-full"/> */}
                                 <div className="p-6">
                                     <h3 className="text-2xl font-bold"> {item.title} </h3>
-                                    <p className="mt-4 text-zinc-400"> {item.description}</p>
-                                    <button onClick={() => setSelectedShowcase(item)} className="mt-6 bg-orange-600 hover:bg-orange-500 px-5 py-2 rounded-lg transition">
+                                    <p className="mt-4"> {item.description}</p>
+                                    <button onClick={() => setSelectedShowcase(item)} className="mt-6 bg-[#f2a013] hover:bg-[#de6f1b] px-5 py-2 rounded-lg transition">
                                         View Case Study
                                     </button>
 
@@ -98,8 +98,8 @@ function ExperienceDetail() {
                 
             </div>
             {selectedShowcase && (
-                <div className="fixed inset-0 z-60 bg-black/80 backdrop-blur-sm flex justify-center items-center">
-                    <div className="relative bg-zinc-900 rounded-3xl border border-zinc-700
+                <div className="fixed inset-0 z-60 bg-[#f2a013]/50 backdrop-blur-sm flex justify-center items-center">
+                    <div className="relative bg-[#efbe69] rounded-3xl border border-zinc-700
                         w-[95%]
                         sm:w-[90%]
                         md:w-[85%]
@@ -124,19 +124,19 @@ function ExperienceDetail() {
                         {selectedShowcase.images && selectedShowcase.images.length > 0 ? (
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                                 {selectedShowcase.images.map((item, index) => (
-                                    <div key={index} className="bg-zinc-800 rounded-xl overflow-hidden">
-                                        <img src={item} alt="foto show case" />
+                                    <div key={index} className="rounded-xl overflow-hidden">
+                                        <img src={item} alt="foto show case" className="w-full h-auto" />
                                     </div>
                                 ))}
                             </div>
                         ) : (<div className="flex flex-col items-center justify-center py-20 text-center">
-                                <i className="ri-image-line text-6xl text-zinc-600 mb-4"></i>
+                                <i className="ri-image-line text-6xl text-zinc-800 mb-4"></i>
 
                                 <h4 className="text-xl font-semibold">
                                     No Gallery Available
                                 </h4>
 
-                                <p className="text-zinc-400 mt-2">
+                                <p className="mt-2">
                                     Images for this case study have not been added yet.
                                 </p>
                             </div>

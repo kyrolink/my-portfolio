@@ -19,8 +19,8 @@ function Home(){
             A versatile professional with 3+ years of experience spanning creative strategy, public relations, marketing, and large-scale television production. Proven track record in leading end-to-end projects, developing impactful campaigns, and collaborating with cross-functional stakeholders to transform ideas into engaging audience experiences and measurable business outcomes
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
-            <a href="/assets/Resume.pdf" download className="bg-[#f2a013]  hover:bg-[#de6f1b] p-4 rounded-2xl ">Download Resume <i className="ri-download-line ri-lg"></i></a>
-            <a href="https://gchmcmhc.my.canva.site/tracyaraunaportfolio" className="bg-[#df5c0b]  hover:bg-[#e69238] p-4 rounded-2xl">My Portfolio <i className="ri-arrow-down-line ri-lg"></i></a>
+            <a href="/assets/Resume.pdf" download className="bg-[#f2a013]  hover:bg-[#de6f1b] p-4 rounded-2xl ">Resume <i className="ri-download-line ri-lg"></i></a>
+            <a href="https://gchmcmhc.my.canva.site/tracyaraunaportfolio" className="bg-[#df5c0b]  hover:bg-[#e69238] p-4 rounded-2xl">Portfolio <i className="ri-arrow-down-line ri-lg"></i></a>
           </div>
         </div>
         <img src={DataImage.HeroImage} alt="Hero Image" className="animate__animated animate__fadeInUp w-350px md:ml-auto" loading="lazy"/>
