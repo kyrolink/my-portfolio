@@ -34,12 +34,12 @@ const NavBar = () => {
                     </button>
 
                      {contactOpen && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 bg-white rounded-xl shadow-xl overflow-hidden z-50">
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 hover:bg-[#f5d08c] rounded-xl shadow-xl overflow-hidden z-50">
                         <a
                             href="https://wa.me/6285183382719"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 text-black"
+                            className="flex items-center gap-3 px-4 py-3 hover:bg-[#F2C572] text-black"
                         >
                             <i className="ri-whatsapp-fill text-green-500"></i>
                             WhatsApp
@@ -47,7 +47,7 @@ const NavBar = () => {
 
                         <a
                             href="mailto:tracyarauna29@gmail.com"
-                            className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 text-black"
+                            className="flex items-center gap-3 px-4 py-3 hover:bg-[#F2C572] text-black"
                         >
                             <i className="ri-mail-fill text-orange-500"></i>
                             Email

@@ -12,7 +12,7 @@ function Home(){
   return(
     <>
       {/* ================== SECTION HERO ================== */}
-      <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
+      <div className="container mx-auto px-4 hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div className="animate__animated animate__fadeInUp fles justify-center">
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">Hi, It's Me Tracy</h2>
           <p className="text-base/loose mb-6 opacity-50 text-justify">
@@ -61,33 +61,33 @@ function Home(){
           </Swiper>
         </div>
       </div>
-      
-      <hr className="border-2 border-[#de6f1b] my-7" />
 
       {/* ================== About ================== */}
-      <div className="about mt-10 py-5" id="about">
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-[#efbe69] rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">
-          {/* <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy"/> */}
-          <p className="text-base/loose mb-10 text-justify">Hi, <b>I'm Tracy Arauna Triyanto </b>, a communication professional specializing in Public Relations, Creative Planning, and Business Development. I hold a Bachelor's degree in Communication Studies from President University.
-              <br />
-              <br />
-              With experience across strategic communication, digital branding, business development, and media production, I enjoy transforming ideas into impactful strategies. I am passionate about building strong relationships, driving creative initiatives, and delivering 
-              meaningful results through collaboration, innovation, and effective communication.</p>
-          <div className="flex items-center justify-between">
-            {/* <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy"/> */}
-            <div className="flex items-center gap-6">
-              <div>
-                <h1 className="text-4xl mb-1">50 <span className="text-orange-500">+</span></h1>
-                <p>Project's</p>
-              </div>
-              <div>
-                <h1 className="text-4xl mb-1">3 <span className="text-orange-500">+</span></h1>
-                <p>Years of Experiences</p>
+      <div className="container mx-auto px-4 about mt-10 py-5 bg-[#f3d49a]" id="about">
+        <div className="container mx-auto px-6">
+          <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">
+            {/* <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy"/> */}
+            <p className="text-base/loose mb-10 text-justify">Hi, <b>I'm Tracy Arauna Triyanto </b>, a communication professional specializing in Public Relations, Creative Planning, and Business Development. I hold a Bachelor's degree in Communication Studies from President University.
+                <br />
+                <br />
+                With experience across strategic communication, digital branding, business development, and media production, I enjoy transforming ideas into impactful strategies. I am passionate about building strong relationships, driving creative initiatives, and delivering 
+                meaningful results through collaboration, innovation, and effective communication.</p>
+            <div className="flex items-center justify-between">
+              {/* <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy"/> */}
+              <div className="flex items-center gap-6">
+                <div>
+                  <h1 className="text-4xl mb-1">50 <span className="text-orange-500">+</span></h1>
+                  <p>Project's</p>
+                </div>
+                <div>
+                  <h1 className="text-4xl mb-1">3 <span className="text-orange-500">+</span></h1>
+                  <p>Years of Experiences</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <hr className="border-2 border-[#de6f1b] my-7" />
+
         {/* ================== Tools ================== */}
         {/* <div className="tools mt-32">
           <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">Tools yang dipakai</h1>
@@ -110,7 +110,7 @@ function Home(){
 
 
       {/* ================== Experience's ================== */}
-        <div className="project py-5" id="experience">
+        <div className="container mx-auto px-4 project py-5" id="experience">
           <h1 className="text-center text-4xl font-bold md-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">Experience</h1>
           {/* <p className="text-base/loose text-center opacity-50%" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once = "true">Here are some of the key milestones that have shaped my professional journey</p> */}
 
@@ -140,7 +140,7 @@ function Home(){
             ))}
           </div>
         </div>
-        <hr className="border-2 border-[#de6f1b] my-7" />
+
 
 
       {/* ================== Contact ================== */}
