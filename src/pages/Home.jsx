@@ -1,7 +1,11 @@
 import DataImage from "../data";
 import {listTools, listProyek} from "../data";
-
 import { Link } from "react-router-dom";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 function Home(){
 
@@ -9,34 +13,68 @@ function Home(){
     <>
       {/* ================== SECTION HERO ================== */}
       <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
-        <div className="animate__animated animate__fadeInUp">
-          <div className="flex items-center gap-3 mb-6 bg-[#efbe69] w-fit p-4 rounded-2xl">
+        <div className="animate__animated animate__fadeInUp fles justify-center">
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">Hi, It's Me Tracy</h2>
+          <p className="text-base/loose mb-6 opacity-50 text-justify">
+          {/* <div className="flex items-center gap-3 mb-6 bg-[#efbe69] w-fit p-4 rounded-2xl">
             <img src={DataImage.HeroImage} alt="Hero Image" className="w-10 rounded-b-md" loading="lazy"/>
             <q> Creating meaningful communication through creativity, strategy, and collaboration </q>
-          </div>
-          <h1 className="text-5xl/tight font-bold mb-6">Hi, It's Me Tracy</h1>
-          <p className="text-base/loose mb-6 opacity-50 text-justify">
-            A versatile professional with 3+ years of experience spanning creative strategy, public relations, marketing, and large-scale television production. Proven track record in leading end-to-end projects, developing impactful campaigns, and collaborating with cross-functional stakeholders to transform ideas into engaging audience experiences and measurable business outcomes
+          </div> */}
+            A versatile professional with 3+ years of experience spanning creative strategy, 
+            public relations, marketing, and large-scale television production. 
+            Proven track record in leading end-to-end projects, developing impactful campaigns, 
+            and collaborating with cross-functional stakeholders to transform ideas into engaging 
+            audience experiences and measurable business outcomes
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href="/assets/Resume.pdf" download className="bg-[#f2a013]  hover:bg-[#de6f1b] p-4 rounded-2xl ">Resume <i className="ri-download-line ri-lg"></i></a>
             <a href="https://gchmcmhc.my.canva.site/tracyaraunaportfolio" className="bg-[#df5c0b]  hover:bg-[#e69238] p-4 rounded-2xl">Portfolio <i className="ri-arrow-down-line ri-lg"></i></a>
           </div>
         </div>
-        <img src={DataImage.HeroImage} alt="Hero Image" className="animate__animated animate__fadeInUp w-350px md:ml-auto" loading="lazy"/>
+        {/* <img src={DataImage.HeroImage} alt="Hero Image" className="animate__animated animate__fadeInUp w-350px md:ml-auto" loading="lazy"/> */}
+        <div className="flex justify-center">
+          <Swiper className="
+            w-full
+            max-w-[280px]
+            sm:max-w-[320px]
+            md:max-w-[380px]
+            lg:max-w-[430px]
+            "
+            modules={[Autoplay, Pagination]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            loop
+            className="w-full max-w-[400px]"
+          >
+            {DataImage.HeroImages.map((image, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={image}
+                  alt={`Hero ${index + 1}`}
+                  className="w-full h-auto object-contain"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
       
+      <hr className="border-2 border-[#de6f1b] my-7" />
+
       {/* ================== About ================== */}
-      <div className="about mt-32 py-10" id="about">
+      <div className="about mt-10 py-5" id="about">
         <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-[#efbe69] rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">
-          <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy"/>
+          {/* <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy"/> */}
           <p className="text-base/loose mb-10 text-justify">Hi, <b>I'm Tracy Arauna Triyanto </b>, a communication professional specializing in Public Relations, Creative Planning, and Business Development. I hold a Bachelor's degree in Communication Studies from President University.
               <br />
               <br />
               With experience across strategic communication, digital branding, business development, and media production, I enjoy transforming ideas into impactful strategies. I am passionate about building strong relationships, driving creative initiatives, and delivering 
               meaningful results through collaboration, innovation, and effective communication.</p>
           <div className="flex items-center justify-between">
-            <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy"/>
+            {/* <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy"/> */}
             <div className="flex items-center gap-6">
               <div>
                 <h1 className="text-4xl mb-1">50 <span className="text-orange-500">+</span></h1>
@@ -49,7 +87,7 @@ function Home(){
             </div>
           </div>
         </div>
-
+        <hr className="border-2 border-[#de6f1b] my-7" />
         {/* ================== Tools ================== */}
         {/* <div className="tools mt-32">
           <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">Tools yang dipakai</h1>
@@ -72,9 +110,9 @@ function Home(){
 
 
       {/* ================== Experience's ================== */}
-        <div className="project mt-32 py-10" id="experience">
+        <div className="project py-5" id="experience">
           <h1 className="text-center text-4xl font-bold md-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once = "true">Experience</h1>
-          <p className="text-base/loose text-center opacity-50%" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once = "true">Here are some of the key milestones that have shaped my professional journey</p>
+          {/* <p className="text-base/loose text-center opacity-50%" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once = "true">Here are some of the key milestones that have shaped my professional journey</p> */}
 
           <div className="project-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 ">
             {listProyek.map(project =>(
@@ -102,7 +140,7 @@ function Home(){
             ))}
           </div>
         </div>
-
+        <hr className="border-2 border-[#de6f1b] my-7" />
 
 
       {/* ================== Contact ================== */}

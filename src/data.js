@@ -1,7 +1,13 @@
-import HeroImage from "/assets/foto-tracy.png";
+import HeroImage1 from "/assets/proyek/scm4.jpg"
+import HeroImage2 from "/assets/proyek/strategicmedia4.png"
+import HeroImage3 from "/assets/proyek/scm5.jpg"
 
-const Image = {
-  HeroImage,
+
+const Image = { HeroImages: [
+    HeroImage1,
+    HeroImage2,
+    HeroImage3,
+  ],
 };
 
 export default Image;
